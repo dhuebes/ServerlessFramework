@@ -1,0 +1,13 @@
+// https://github.com/serverless/serverless/issues/4218
+module.exports = () => {  
+    const fs = require('fs')
+    const files = fs.readdirSync('./handlersYML')
+    const YAML = require('yamljs')  
+  
+    const merged = files
+        .map(f => fs.readFileSync(`./handlersYML/${f}`, 'utf8'))
+        .map(raw => YAML.parse(raw))
+        .reduce( (result, handler) => Object.assign(result, handler), {})
+
+    return merged
+}

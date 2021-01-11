@@ -1,0 +1,15 @@
+getCustomerById:
+  handler: src/handlers/customer/getCustomerById.handler
+  events:
+    - http:
+        method: GET
+        path: /customer/{id}
+        cors: true 
+
+getCustomers:
+  handler: src/handlers/customer/getCustomers.handler
+  events:
+    - http:
+        method: GET
+        path: /customer
+        cors: true 

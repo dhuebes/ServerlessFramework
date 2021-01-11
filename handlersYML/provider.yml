@@ -1,0 +1,15 @@
+getProviderById:
+  handler: src/handlers/provider/getProviderById.handler
+  events:
+    - http:
+        method: GET
+        path: /provider/{id}
+        cors: true 
+
+getProviders:
+  handler: src/handlers/provider/getProviders.handler
+  events:
+    - http:
+        method: GET
+        path: /provider   
+        cors: true 

@@ -1,0 +1,15 @@
+getUserById:
+  handler: src/handlers/user/getUserById.handler
+  events:
+    - http:
+        method: GET
+        path: /user/{id}
+        cors: true 
+
+getUsers:
+  handler: src/handlers/user/getUsers.handler
+  events:
+    - http:
+        method: GET
+        path: /user   
+        cors: true 
