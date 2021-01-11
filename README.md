@@ -2,13 +2,15 @@
 
 Utiliza Servesless framework<br/>
 AWS como providor dos serviços cloud<br/>
-MySQL para banco de dados
-
 
 ## Detalhamento do projeto
 * Definição dos endpoint nas pasta handlersYML
 * Implementação dos endpoint em src/handlers 
 * Configuração de provider em serveless.yml 
+
+## Roadmap
+Gravar dados em banco de dados
+Criar POST, DELETE, PATCH
 
 ## Comandos 
 * Deploy de todo o projeto na AWS
